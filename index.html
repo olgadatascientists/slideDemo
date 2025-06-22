@@ -3,7 +3,7 @@
 <head>
   <title>Slidify Demo</title>
   <meta charset="utf-8">
-  <meta name="description" content="Slidify Demo">
+  <meta name="description" content="Capstone Project">
   <meta name="author" content="Olga Koroleva">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,12 +41,13 @@
     <!-- SLIDES -->
       <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Introduction</h2>
+    <h2>Introduction about the App</h2>
   </hgroup>
   <article>
     <ol>
-<li>This presentation is a demo for Slidify</li>
-<li>It is a simple student homework</li>
+      <li>The Shiny app uses 3-gram dictionary.</li>
+      <li>It will match the last two words of an input with the first two words of entries in the dictionary, to predict the third word. </li>
+      <li> If no entries found, it will instead match the last word of the input only. If no entries found again, it will return the most frequent 3-grams as result.</li>
 </ol>
 
   </article>
@@ -55,15 +56,16 @@
 
       <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Shiny App Demo</h2>
+    <h2>N-gram Dictionary</h2>
   </hgroup>
   <article>
     <p>Animated List</p>
 
 <ol class = "build">
-<li>Used shinylive package of R to generate and host the app via GitHub</li>
-<li>The app provides a forecasting sandbox for the AirPassengers dataset</li>
-<li>It supports 3 stats forecasting models - Linear Regression, ARIMA, and Holt-Winters</li>
+  <li>Get 2-grams and 3-grams (with stopwords).</li>
+  <li>tokenize_ngrams(<text>, n_min=2, n=3)</li>>
+  <li>To reduce the N-gram dictionary size, first calculate frequency for each N-gram, then abandon the least frequent ones (the long tail), say the ones only cover 10% of occurrences or the ones that only appear once in the text corpus.</li>
+  <li>E.g. The total count of 1-gram is around 540,000. We would only need 6,000 words to cover 90% of the occurrences.</li>
 </ol>
 
   </article>
@@ -72,11 +74,11 @@
 
       <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>The Dataset in Pics</h2>
+    <h2>Some fun statistics</h2>
   </hgroup>
   <article>
     <ol>
-      <img src="forecast.png" style="border: none; width: 80%; height: 80%" alt="From Rmd">
+      <img src="stats.png" style="border: none; width: 80%; height: 80%" alt="From Rmd">
     </ol>
   </article>
   <!-- Presenter Notes -->
@@ -89,7 +91,7 @@
   </hgroup>
   <article>
     <ol>
-      <h1>Have a great day</h1>>
+      <h1>Have a great day</h1>
     <h1>Thank you for your time assessing this!</h1>
 </ol>
   </article>
